@@ -116,38 +116,6 @@ section{padding:88px 24px}
 .btn-blue-out{background:transparent;color:var(--blue);border:2px solid var(--blue)}
 .btn-blue-out:hover{background:var(--blue-light)}
 .price-note{text-align:center;font-size:13px;color:var(--n500);margin-top:24px}
-.billing-toggle{
-  display:flex;
-  justify-content:center;
-  gap:0;
-  margin:32px auto 0;
-  width:max-content;
-  background:#fff;
-  border:1px solid var(--n200);
-  border-radius:999px;
-  padding:4px;
-}
-
-.billing-toggle button{
-  border:none;
-  background:none;
-  padding:10px 22px;
-  border-radius:999px;
-  cursor:pointer;
-  font-weight:700;
-  color:var(--n500);
-}
-
-.billing-toggle button.active{
-  background:var(--blue);
-  color:#fff;
-}
-
-.billing-toggle span{
-  font-size:12px;
-  margin-left:6px;
-  color:#0F6E56;
-}
 
 /* SECURITY */
 .sec-dark{background:var(--blue-dark);color:#fff}
@@ -406,12 +374,6 @@ footer{background:var(--n900);color:rgba(255,255,255,.7);padding:56px 24px 32px}
   </div>
 </section>
 
-<!-- PRICING TOGGLE -->
-<div class="billing-toggle">
-  <button id="monthlyBtn" class="active">Monthly</button>
-  <button id="annualBtn">Annual <span>Save 17%</span></button>
-</div>
-
 <!-- PRICING -->
 <section id="pricing" class="pricing-bg">
   <div class="inner">
@@ -423,12 +385,7 @@ footer{background:var(--n900);color:rgba(255,255,255,.7);padding:56px 24px 32px}
       <!-- STARTER -->
       <div class="price-card">
         <div class="price-name">Starter</div>
-        <div class="price-amt"
-     data-monthly="30000"
-     data-annual="300000">
-  <sup>₦</sup><span class="price-value">30,000</span>
-  <span class="price-period">/month</span>
-</div>
+        <div class="price-amt"><sup>₦</sup>30,000<span>/month</span></div>
         <div style="font-size:14px;color:var(--n500);margin-top:4px">$40 USD/month</div>
         <div class="price-users">Up to 3 staff accounts · Perfect for solo practitioners</div>
         <ul class="price-feats">
@@ -450,12 +407,7 @@ footer{background:var(--n900);color:rgba(255,255,255,.7);padding:56px 24px 32px}
       <div class="price-card hot">
         <div class="hot-badge">Most Popular</div>
         <div class="price-name">Growth</div>
-        <div class="price-amt"
-     data-monthly="80000"
-     data-annual="800000">
-  <sup>₦</sup><span class="price-value">80,000</span>
-  <span class="price-period">/month</span>
-</div>
+        <div class="price-amt"><sup>₦</sup>80,000<span>/month</span></div>
         <div style="font-size:14px;color:var(--n500);margin-top:4px">$85 USD/month</div>
         <div class="price-users">Up to 10 staff accounts · Ideal for growing clinics</div>
         <ul class="price-feats">
@@ -476,12 +428,7 @@ footer{background:var(--n900);color:rgba(255,255,255,.7);padding:56px 24px 32px}
       <!-- ENTERPRISE -->
       <div class="price-card">
         <div class="price-name">Enterprise</div>
-        <div class="price-amt"
-     data-monthly="250,000"
-     data-annual="2,500,000">
-  <sup>₦</sup><span class="price-value">250,000</span>
-  <span class="price-period">/month</span>
-</div>
+        <div class="price-amt"><sup>₦</sup>250,000<span>/month</span></div>
         <div style="font-size:14px;color:var(--n500);margin-top:4px">$250 USD/month</div>
         <div class="price-users">Unlimited staff accounts · For hospitals and large clinics</div>
         <ul class="price-feats">
@@ -770,33 +717,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     }
   })
 })
-let billingMode = 'monthly'
-
-const monthlyBtn = document.getElementById('monthlyBtn')
-const annualBtn  = document.getElementById('annualBtn')
-
-function updatePricing(mode){
-  document.querySelectorAll('.price-amt').forEach(card => {
-    const value = card.querySelector('.price-value')
-    const period = card.querySelector('.price-period')
-
-    if(mode === 'annual'){
-      value.textContent =
-        Number(card.dataset.annual).toLocaleString()
-      period.textContent = '/year'
-    } else {
-      value.textContent =
-        Number(card.dataset.monthly).toLocaleString()
-      period.textContent = '/month'
-    }
-  })
-
-  monthlyBtn.classList.toggle('active', mode === 'monthly')
-  annualBtn.classList.toggle('active', mode === 'annual')
-}
-
-monthlyBtn.onclick = () => updatePricing('monthly')
-annualBtn.onclick  = () => updatePricing('annual')
 </script>
 </body>
 </html>
