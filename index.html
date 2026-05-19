@@ -15,7 +15,7 @@
 :root{
   --blue:#185FA5;--blue-dark:#0C447C;--blue-light:#E6F1FB;--blue-mid:#378ADD;
   --green:#0F6E56;--green-light:#EAF3DE;
-  --n900:#1a1a1a;--n700:#444;--n500:#777;--n300:#ccc;--n200:#e8e8e8;--n100:#f7f7f7;
+  --n900:#1a1a1a;--n700:#444;--n500:#777;--n300:#ccc;--n200:#e8e8e8;--n100:#f7f7f7;--green:#0F6E56;--green-light:#EAF3DE;
   --white:#fff;--r:12px;--rs:8px
 }
 html{scroll-behavior:smooth}
@@ -116,6 +116,14 @@ section{padding:88px 24px}
 .btn-blue-out{background:transparent;color:var(--blue);border:2px solid var(--blue)}
 .btn-blue-out:hover{background:var(--blue-light)}
 .price-note{text-align:center;font-size:13px;color:var(--n500);margin-top:24px}
+.price-toggle{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:40px}
+.price-toggle span{font-size:15px;font-weight:500;color:var(--n500);transition:color .15s}
+.price-toggle span.active{color:var(--n900);font-weight:700}
+.toggle-track{width:48px;height:26px;background:var(--n300);border-radius:100px;cursor:pointer;transition:background .2s;position:relative;border:none;outline:none}
+.toggle-track.on{background:var(--blue)}
+.toggle-thumb{position:absolute;top:3px;left:3px;width:20px;height:20px;background:#fff;border-radius:50%;transition:transform .2s;box-shadow:0 1px 4px rgba(0,0,0,0.18)}
+.toggle-track.on .toggle-thumb{transform:translateX(22px)}
+.save-badge{background:var(--green-light);color:var(--green);font-size:12px;font-weight:700;padding:4px 10px;border-radius:100px;border:1px solid #86efac}
 
 /* SECURITY */
 .sec-dark{background:var(--blue-dark);color:#fff}
@@ -380,13 +388,24 @@ footer{background:var(--n900);color:rgba(255,255,255,.7);padding:56px 24px 32px}
     <div class="tag">Pricing</div>
     <h2 class="sec-title">Simple, transparent pricing</h2>
     <p class="sec-sub">No setup fees. No hidden charges. Cancel anytime. Start free for 1 month.</p>
+
+    <!-- Billing toggle -->
+    <div class="price-toggle">
+      <span id="lbl-monthly" class="active">Monthly</span>
+      <button class="toggle-track" id="billing-toggle" onclick="toggleBilling()" aria-label="Toggle billing cycle">
+        <span class="toggle-thumb"></span>
+      </button>
+      <span id="lbl-annual">Annual</span>
+      <span class="save-badge" id="save-badge" style="display:none">Save 2 months</span>
+    </div>
+
     <div class="price-grid">
 
       <!-- STARTER -->
       <div class="price-card">
         <div class="price-name">Starter</div>
-        <div class="price-amt"><sup>₦</sup>30,000<span>/month</span></div>
-        <div style="font-size:14px;color:var(--n500);margin-top:4px">$40 USD/month</div>
+        <div class="price-amt"><sup>₦</sup><span class="price-val" data-monthly="30,000" data-annual="300,000">30,000</span><span class="price-period">/month</span></div>
+        <div class="price-save" style="font-size:13px;color:var(--green);font-weight:600;margin-top:4px;min-height:18px"></div>
         <div class="price-users">Up to 3 staff accounts · Perfect for solo practitioners</div>
         <ul class="price-feats">
           <li><span class="ck">✓</span> Patient records and clinical notes</li>
@@ -400,15 +419,15 @@ footer{background:var(--n900);color:rgba(255,255,255,.7);padding:56px 24px 32px}
           <li class="muted"><span class="cx">✗</span> AI differential diagnosis</li>
           <li class="muted"><span class="cx">✗</span> Custom MRN prefix</li>
         </ul>
-        <a href="https://app.physiocore.xyz/register" class="btn-blue btn-blue-out">Get Started</a>
+        <a href="https://app.physiocore.xyz/register" class="btn-blue btn-blue-out">Get Started Free</a>
       </div>
 
       <!-- GROWTH -->
       <div class="price-card hot">
         <div class="hot-badge">Most Popular</div>
         <div class="price-name">Growth</div>
-        <div class="price-amt"><sup>₦</sup>80,000<span>/month</span></div>
-        <div style="font-size:14px;color:var(--n500);margin-top:4px">$85 USD/month</div>
+        <div class="price-amt"><sup>₦</sup><span class="price-val" data-monthly="80,000" data-annual="800,000">80,000</span><span class="price-period">/month</span></div>
+        <div class="price-save" style="font-size:13px;color:var(--green);font-weight:600;margin-top:4px;min-height:18px"></div>
         <div class="price-users">Up to 10 staff accounts · Ideal for growing clinics</div>
         <ul class="price-feats">
           <li><span class="ck">✓</span> Everything in Starter</li>
@@ -418,18 +437,17 @@ footer{background:var(--n900);color:rgba(255,255,255,.7);padding:56px 24px 32px}
           <li><span class="ck">✓</span> HMO billing and management</li>
           <li><span class="ck">✓</span> Advanced revenue analytics</li>
           <li><span class="ck">✓</span> PDF onboarding guide</li>
-          <li><span class="ck">✓</span> Priority email support</li>
           <li class="muted"><span class="cx">✗</span> Custom MRN prefix</li>
           <li class="muted"><span class="cx">✗</span> Dedicated onboarding call</li>
         </ul>
-        <a href="https://app.physiocore.xyz/register" class="btn-blue">Get Started</a>
+        <a href="https://app.physiocore.xyz/register" class="btn-blue">Get Started Free</a>
       </div>
 
       <!-- ENTERPRISE -->
       <div class="price-card">
         <div class="price-name">Enterprise</div>
-        <div class="price-amt"><sup>₦</sup>250,000<span>/month</span></div>
-        <div style="font-size:14px;color:var(--n500);margin-top:4px">$250 USD/month</div>
+        <div class="price-amt"><sup>₦</sup><span class="price-val" data-monthly="250,000" data-annual="2,500,000">250,000</span><span class="price-period">/month</span></div>
+        <div class="price-save" style="font-size:13px;color:var(--green);font-weight:600;margin-top:4px;min-height:18px"></div>
         <div class="price-users">Unlimited staff accounts · For hospitals and large clinics</div>
         <ul class="price-feats">
           <li><span class="ck">✓</span> Everything in Growth</li>
@@ -441,7 +459,7 @@ footer{background:var(--n900);color:rgba(255,255,255,.7);padding:56px 24px 32px}
           <li><span class="ck">✓</span> Custom reporting</li>
           <li><span class="ck">✓</span> Priority support and SLA</li>
         </ul>
-        <a href="#demo" class="btn-blue btn-blue-out">Contact Us</a>
+        <a href="https://app.physiocore.xyz/register" class="btn-blue btn-blue-out">Get Started Free</a>
       </div>
 
     </div>
@@ -701,6 +719,34 @@ async function submitDemo() {
 
   btn.disabled = false
   btn.textContent = 'Book a Free Demo →'
+}
+
+// Billing toggle
+let isAnnual = false
+const SAVINGS = { '30,000': '₦60,000', '80,000': '₦160,000', '250,000': '₦500,000' }
+
+function toggleBilling() {
+  isAnnual = !isAnnual
+  const track  = document.getElementById('billing-toggle')
+  const lblMo  = document.getElementById('lbl-monthly')
+  const lblAn  = document.getElementById('lbl-annual')
+  const badge  = document.getElementById('save-badge')
+
+  track.classList.toggle('on', isAnnual)
+  lblMo.classList.toggle('active', !isAnnual)
+  lblAn.classList.toggle('active', isAnnual)
+  badge.style.display = isAnnual ? 'inline-flex' : 'none'
+
+  document.querySelectorAll('.price-val').forEach(el => {
+    el.textContent = isAnnual ? el.dataset.annual : el.dataset.monthly
+  })
+  document.querySelectorAll('.price-period').forEach(el => {
+    el.textContent = isAnnual ? '/year' : '/month'
+  })
+  document.querySelectorAll('.price-save').forEach((el, i) => {
+    const savings = ['₦60,000', '₦160,000', '₦500,000']
+    el.textContent = isAnnual ? `Save ${savings[i]} vs monthly` : ''
+  })
 }
 
 document.querySelectorAll('a[href^="#"]').forEach(a => {
