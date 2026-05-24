@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PhysioCore — The Operating System for Physiotherapy Clinics</title>
-<meta name="description" content="Run your entire physiotherapy clinic from one platform. Patient records, AI diagnosis, appointments, billing, and SMS reminders. Built for Nigerian clinics.">
+<meta name="description" content="Run your entire physiotherapy clinic from one platform. AI medical scribe, teleconsultation, differential diagnosis, patient records, appointments, billing, and SMS reminders. Built for physiotherapy clinics.">
 <meta property="og:title" content="PhysioCore — The Operating System for Physiotherapy Clinics">
 <meta property="og:description" content="Run your entire physiotherapy clinic from one platform. Appointments. Documentation. Billing. AI Diagnosis. Outcomes.">
 <meta property="og:url" content="https://physiocore.xyz">
@@ -219,7 +219,8 @@ footer{background:var(--n900);color:rgba(255,255,255,.7);padding:56px 24px 32px}
   <p>Run your entire clinic from one platform — patient records, AI-assisted diagnosis, appointments, billing, and automated SMS reminders.</p>
   <div class="hero-pills">
     <span class="pill">📋 Paperless Records</span>
-    <span class="pill">🤖 AI Diagnosis Support</span>
+    <span class="pill">🤖 AI Medical Scribe</span>
+    <span class="pill">🎥 Teleconsultation</span>
     <span class="pill">📱 SMS Reminders</span>
     <span class="pill">💳 HMO Billing</span>
     <span class="pill">📊 Revenue Reports</span>
@@ -239,6 +240,7 @@ footer{background:var(--n900);color:rgba(255,255,255,.7);padding:56px 24px 32px}
     <div class="trust-item"><span class="trust-dot"></span>Full Audit Trail</div>
     <div class="trust-item"><span class="trust-dot"></span>Role-Based Access</div>
     <div class="trust-item"><span class="trust-dot"></span>AI-Powered</div>
+    <div class="trust-item"><span class="trust-dot"></span>Multi-currency support</div>
   </div>
 </div>
 
@@ -261,6 +263,10 @@ footer{background:var(--n900);color:rgba(255,255,255,.7);padding:56px 24px 32px}
       <div class="stat-n">5</div>
       <div class="stat-l">User roles with granular access control</div>
     </div>
+    <div class="stat">
+      <div class="stat-n">AI</div>
+      <div class="stat-l">Medical scribe that documents sessions from speech automatically</div>
+    </div>
   </div>
 </section>
 
@@ -282,13 +288,19 @@ footer{background:var(--n900);color:rgba(255,255,255,.7);padding:56px 24px 32px}
         <p>GPT-4o analyses your assessment findings and suggests ranked differential diagnoses to support clinical reasoning at the point of care.</p>
       </div>
       <div class="feat-card">
-        <div class="feat-icon">🤖📝</div>
+        <div class="feat-icon">🎙️</div>
         <h3>AI Medical Scribe</h3>
-        <p>The physiotherapist speaks naturally during the session. PhysioCore transcribes the audio and generates a complete SOAP note automatically. The physio reviews, edits if needed, and finalises. Saves 30–60 minutes of documentation daily.</p>      </div>
+        <p>Hit record, see the patient, and documentation writes itself. The scribe captures the actual conversation — patient's words, physio's findings — and generates a complete SOAP note or structured assessment automatically. Works for both session notes and initial assessments. Saves 30–60 minutes daily.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">🎥</div>
+        <h3>Teleconsultation</h3>
+        <p>Conduct secure video consultations directly from PhysioCore. Patients receive a join link by SMS — no app download required. The AI scribe records the consultation and generates the clinical note automatically when the call ends. Works for both initial assessments and follow-up sessions.</p>
+      </div>
       <div class="feat-card">
         <div class="feat-icon">📱</div>
         <h3>Appointment Scheduling + SMS</h3>
-        <p>Book single or recurring appointments. Automatic SMS reminders sent to patients at 72 hours, 24 hours, and 3 hours before their appointment — each with a Google Calendar link so patients can save the appointment instantly.</p>
+        <p>Book single or recurring appointments. Automatic SMS reminders at 72h, 24h, and 3h before the appointment — each with a Google Calendar link. Teleconsultation appointments include the secure video join link in the confirmation SMS automatically.</p>
       </div>
       <div class="feat-card">
         <div class="feat-icon">💳</div>
@@ -349,7 +361,7 @@ footer{background:var(--n900);color:rgba(255,255,255,.7);padding:56px 24px 32px}
       <div class="step">
         <div class="step-n">4</div>
         <h3>Start documenting</h3>
-        <p>Run assessments with AI support, document session notes, book appointments, and record payments.</p>
+        <p>Run assessments with AI support, use the scribe to document sessions hands-free, conduct teleconsultations, book appointments, and record payments.</p>
       </div>
     </div>
   </div>
@@ -381,6 +393,11 @@ footer{background:var(--n900);color:rgba(255,255,255,.7);padding:56px 24px 32px}
         <div class="roi-n">100%</div>
         <div class="roi-l">Documentation compliance</div>
         <div class="roi-d">Locked notes, supervisor co-sign for students, and a full audit trail protect your clinic medicolegally.</div>
+      </div>
+      <div class="roi-card">
+        <div class="roi-n">60min</div>
+        <div class="roi-l">Documentation time saved per physio daily</div>
+        <div class="roi-d">The AI scribe turns a 10-minute consultation into a complete clinical note without the physio typing a single word.</div>
       </div>
     </div>
   </div>
@@ -421,6 +438,8 @@ footer{background:var(--n900);color:rgba(255,255,255,.7);padding:56px 24px 32px}
           <li><span class="ck">✓</span> Email support</li>
           <li class="muted"><span class="cx">✗</span> Full audit trail</li>
           <li class="muted"><span class="cx">✗</span> AI differential diagnosis</li>
+          <li class="muted"><span class="cx">✗</span> AI medical scribe</li>
+          <li class="muted"><span class="cx">✗</span> Teleconsultation</li>
           <li class="muted"><span class="cx">✗</span> Custom MRN prefix</li>
         </ul>
         <a href="https://app.physiocore.xyz/register" class="btn-blue btn-blue-out">Get Started Free</a>
@@ -439,6 +458,8 @@ footer{background:var(--n900);color:rgba(255,255,255,.7);padding:56px 24px 32px}
           <li><span class="ck">✓</span> Full audit trail</li>
           <li><span class="ck">✓</span> Co-sign workflow for students</li>
           <li><span class="ck">✓</span> HMO billing and management</li>
+          <li><span class="ck">✓</span> AI medical scribe</li>
+          <li><span class="ck">✓</span> Teleconsultation (video calls)</li>
           <li><span class="ck">✓</span> Advanced revenue analytics</li>
           <li><span class="ck">✓</span> PDF onboarding guide</li>
           <li class="muted"><span class="cx">✗</span> Custom MRN prefix</li>
@@ -508,6 +529,8 @@ footer{background:var(--n900);color:rgba(255,255,255,.7);padding:56px 24px 32px}
       <span class="sec-badge">✓ NDPA 2023</span>
       <span class="sec-badge">✓ Encrypted storage — Frankfurt, Germany</span>
       <span class="sec-badge">✓ No data sold or shared</span>
+      <span class="sec-badge">✓ Encrypted video consultations</span>
+      <span class="sec-badge">✓ Patient consent captured before video</span>
     </div>
   </div>
 </section>
@@ -616,7 +639,7 @@ footer{background:var(--n900);color:rgba(255,255,255,.7);padding:56px 24px 32px}
       <p><strong>1. Introduction</strong><br>PhysioCore is operated by Oluwadamilola Oni, Lagos, Nigeria.</p><br>
       <p><strong>2. Data Collected</strong><br>Clinic and staff data, patient data entered by clinical staff, and technical data.</p><br>
       <p><strong>3. Storage and Security</strong><br>All data stored on Supabase infrastructure in Frankfurt, Germany. Encrypted at rest and in transit.</p><br>
-      <p><strong>4. Third Parties</strong><br>Supabase (database), OpenAI (AI diagnosis), Termii (SMS), Resend (email). We do not sell data.</p><br>
+      <p><strong>4. Third Parties</strong><br>Supabase (database), OpenAI (AI diagnosis and transcription), Daily.co (video consultations), Termii (SMS), Resend (email). We do not sell data.</p><br>
       <p><strong>Contact:</strong> roiphysiotherapy@gmail.com</p>
     </div>
     <div style="padding:16px 24px;border-top:1px solid #e8e8e8;flex-shrink:0">
