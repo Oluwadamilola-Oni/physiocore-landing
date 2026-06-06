@@ -189,6 +189,31 @@ section{padding:96px 24px}
 .demo-success p{font-size:15px;color:var(--n600)}
 
 /* ── FOOTER ── */
+.pcq-section{background:linear-gradient(135deg,#0A2744 0%,#0D3D6B 60%,#0A7B6B 100%);color:#fff;padding:96px 24px}
+.pcq-section .tag{background:rgba(255,255,255,.12);color:rgba(255,255,255,.9);border:1px solid rgba(255,255,255,.2)}
+.pcq-section .sec-title{color:#fff}
+.pcq-section .sec-sub{color:rgba(255,255,255,.7)}
+.pcq-feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin:40px 0}
+.pcq-feat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:24px;transition:background .2s}
+.pcq-feat:hover{background:rgba(255,255,255,.12)}
+.pcq-feat-icon{font-size:28px;margin-bottom:12px}
+.pcq-feat h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:6px}
+.pcq-feat p{font-size:13px;color:rgba(255,255,255,.65);line-height:1.6;margin:0}
+.pcq-price-row{display:flex;flex-wrap:wrap;gap:16px;margin:36px 0}
+.pcq-plan{flex:1;min-width:200px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--r);padding:24px}
+.pcq-plan.hot{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.3)}
+.pcq-plan-name{font-size:13px;font-weight:700;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.pcq-plan-price{font-size:32px;font-weight:800;color:#fff;margin-bottom:4px}
+.pcq-plan-period{font-size:12px;color:rgba(255,255,255,.5);margin-bottom:16px}
+.pcq-plan-feats{list-style:none;padding:0;margin:0;space-y:8px}
+.pcq-plan-feats li{font-size:13px;color:rgba(255,255,255,.75);padding:4px 0;display:flex;align-items:flex-start;gap:8px}
+.pcq-plan-feats li span{color:#4ADE80;flex-shrink:0;font-weight:700}
+.pcq-plan-feats li span.cx{color:rgba(255,255,255,.3)}
+.pcq-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px;justify-content:center}
+.btn-pcq-primary{background:#fff;color:#0A2744;font-weight:700;padding:14px 32px;border-radius:100px;font-size:15px;text-decoration:none;transition:all .2s;display:inline-block}
+.btn-pcq-primary:hover{background:rgba(255,255,255,.9);transform:translateY(-1px)}
+.btn-pcq-ghost{border:2px solid rgba(255,255,255,.4);color:#fff;font-weight:600;padding:13px 28px;border-radius:100px;font-size:15px;text-decoration:none;transition:all .2s;display:inline-block}
+.btn-pcq-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
 footer{background:var(--n900);color:rgba(255,255,255,.6);padding:60px 24px 32px}
 .foot-inner{max-width:1120px;margin:0 auto}
 .foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
@@ -228,6 +253,7 @@ footer{background:var(--n900);color:rgba(255,255,255,.6);padding:60px 24px 32px}
     </a>
     <div class="nav-links">
       <a href="#features">Features</a>
+      <a href="#physiocliniq" style="color:var(--teal);font-weight:700">PhysioCliniQ ↗</a>
       <a href="#physioreach">PhysioReach</a>
       <a href="#pricing">Pricing</a>
       <a href="#security">Security</a>
@@ -624,6 +650,96 @@ footer{background:var(--n900);color:rgba(255,255,255,.6);padding:60px 24px 32px}
   </div>
 </section>
 
+<!-- PHYSIOCLINIQ -->
+<section id="physiocliniq" class="pcq-section">
+  <div class="inner">
+    <div class="tag" style="display:inline-block;margin-bottom:20px">🩺 For Solo Physiotherapists</div>
+    <h2 class="sec-title" style="max-width:640px">Working independently?<br>There's a product built for you.</h2>
+    <p class="sec-sub" style="max-width:580px;margin:16px auto 0">
+      PhysioCore EPR is designed for clinics and teams. If you're a solo physiotherapist —
+      private practice, home service, or remote care — <strong style="color:#fff">PhysioCliniQ</strong> is
+      your tool. AI-powered, mobile-friendly, and priced for one practitioner.
+    </p>
+
+    <div class="pcq-feat-grid">
+      <div class="pcq-feat">
+        <div class="pcq-feat-icon">🧠</div>
+        <h3>AI Differential Diagnosis</h3>
+        <p>Input your assessment findings and get ranked differentials with clinical reasoning in seconds. Powered by GPT-4o at the point of care.</p>
+      </div>
+      <div class="pcq-feat">
+        <div class="pcq-feat-icon">🎙️</div>
+        <h3>AI Medical Scribe</h3>
+        <p>Talk to your patient. The AI listens, transcribes, and structures a complete SOAP note automatically. Saves 30–60 minutes every day.</p>
+      </div>
+      <div class="pcq-feat">
+        <div class="pcq-feat-icon">📡</div>
+        <h3>PhysioReach</h3>
+        <p>Patients submit their complaint via your unique link — from anywhere. You review, approve a home program, and send it to their WhatsApp.</p>
+      </div>
+      <div class="pcq-feat">
+        <div class="pcq-feat-icon">📋</div>
+        <h3>Patient Records & Notes</h3>
+        <p>Full clinical history, encounter tracking, SOAP follow-up notes, discharge summaries — all from any device, anywhere you work.</p>
+      </div>
+      <div class="pcq-feat">
+        <div class="pcq-feat-icon">🧾</div>
+        <h3>Receipts & Invoices</h3>
+        <p>Professional receipts and invoices generated instantly after every consultation. Send to patients directly.</p>
+      </div>
+      <div class="pcq-feat">
+        <div class="pcq-feat-icon">📊</div>
+        <h3>Reports & Analytics</h3>
+        <p>Your caseload, session counts, pain score trends, and outcome improvements — all in one live dashboard.</p>
+      </div>
+    </div>
+
+    <div style="max-width:560px;margin:0 auto">
+      <p style="text-align:center;font-size:14px;color:rgba(255,255,255,.6);margin-bottom:24px;letter-spacing:.3px;text-transform:uppercase;font-weight:600">Simple pricing. No clinic overhead.</p>
+      <div class="pcq-price-row">
+        <div class="pcq-plan">
+          <div class="pcq-plan-name">Basic</div>
+          <div class="pcq-plan-price">₦8,000</div>
+          <div class="pcq-plan-period">per month · ₦80,000/yr</div>
+          <ul class="pcq-plan-feats">
+            <li><span>✓</span> Patient records & notes</li>
+            <li><span>✓</span> AI Differential Diagnosis</li>
+            <li><span>✓</span> SOAP & follow-up notes</li>
+            <li><span>✓</span> Reports & analytics</li>
+            <li><span class="cx">✕</span> AI Medical Scribe</li>
+            <li><span class="cx">✕</span> PhysioReach</li>
+            <li><span class="cx">✕</span> Receipts & Invoices</li>
+          </ul>
+        </div>
+        <div class="pcq-plan hot">
+          <div class="pcq-plan-name">Pro ⭐</div>
+          <div class="pcq-plan-price">₦15,000</div>
+          <div class="pcq-plan-period">per month · ₦150,000/yr</div>
+          <ul class="pcq-plan-feats">
+            <li><span>✓</span> Everything in Basic</li>
+            <li><span>✓</span> AI Medical Scribe</li>
+            <li><span>✓</span> PhysioReach remote care</li>
+            <li><span>✓</span> Receipts & Invoices</li>
+            <li><span>✓</span> Specialist assessments</li>
+          </ul>
+        </div>
+      </div>
+      <p style="text-align:center;font-size:12px;color:rgba(255,255,255,.45);margin-bottom:32px">
+        International: Basic $15/mo · Pro $25/mo &nbsp;|&nbsp; 30-day free trial · No credit card required
+      </p>
+    </div>
+
+    <div class="pcq-btns">
+      <a href="https://physiocliniq.com" target="_blank" class="btn-pcq-primary">
+        Try PhysioCliniQ Free →
+      </a>
+      <a href="https://physiocliniq.com" target="_blank" class="btn-pcq-ghost">
+        Learn more at physiocliniq.com
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- SECURITY -->
 <section id="security" class="sec-dark">
   <div class="inner">
@@ -707,6 +823,7 @@ footer{background:var(--n900);color:rgba(255,255,255,.6);padding:60px 24px 32px}
       <div class="foot-col">
         <h4>Product</h4>
         <a href="#features">Features</a>
+      <a href="#physiocliniq" style="color:var(--teal);font-weight:700">PhysioCliniQ ↗</a>
         <a href="#physioreach">PhysioReach</a>
         <a href="#pricing">Pricing</a>
         <a href="#security">Security</a>
