@@ -537,7 +537,7 @@ footer{background:var(--n900);color:rgba(255,255,255,.6);padding:60px 24px 32px}
   <div class="inner">
     <div class="tag">Pricing</div>
     <h2 class="sec-title">Simple, transparent pricing</h2>
-    <p class="sec-sub">No setup fees. No hidden charges. Cancel anytime. Every plan starts with a free 30-day trial.</p>
+    <p class="sec-sub">No setup fees. No hidden charges. Cancel anytime. Every clinic starts with a free 14-day trial — no credit card required.</p>
 
     <!-- Currency selector -->
     <div class="currency-toggle">
@@ -565,31 +565,55 @@ footer{background:var(--n900);color:rgba(255,255,255,.6);padding:60px 24px 32px}
       </p>
     </div>
 
-    <div class="price-grid">
-      <!-- GROWTH -->
+    <div class="price-grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
+
+      <!-- FREE -->
       <div class="price-card">
-        <div class="price-name">Growth</div>
+        <div class="price-name">Free</div>
         <div class="price-amt">
-          <span class="price-sym">&#8358;</span>
-          <span class="price-val" data-ngn-monthly="60,000" data-ngn-annual="600,000" data-usd-monthly="79" data-usd-annual="790">60,000</span>
-          <span class="price-period">/month</span>
+          <span class="price-sym" style="font-size:22px">₦</span>
+          <span style="font-size:38px;font-weight:800;color:var(--n900)">0</span>
+          <span class="price-period">/forever</span>
         </div>
-        <div class="price-save-row"><span class="price-save" style="font-size:13px;color:var(--green);font-weight:600"></span></div>
-        <div class="price-users">Up to 5 staff · Small clinics & departments</div>
+        <div class="price-save-row"><span style="font-size:13px;color:var(--n500);font-weight:500">Run your clinic. No time limit.</span></div>
+        <div class="price-users">20 patients · 2 staff accounts</div>
         <ul class="price-feats">
           <li><span class="ck">✓</span> Patient records & clinical notes</li>
           <li><span class="ck">✓</span> Appointment scheduling</li>
-          <li><span class="ck">✓</span> SMS appointment reminders</li>
-          <li><span class="ck">✓</span> Payments & itemised receipts</li>
-          <li><span class="ck">✓</span> Basic revenue reports</li>
+          <li><span class="ck">✓</span> Basic dashboard</li>
           <li><span class="ck">✓</span> Document uploads</li>
-          <li><span class="ck">✓</span> Full audit trail</li>
-          <li class="muted"><span class="cx">✗</span> AI differential diagnosis</li>
+          <li class="muted"><span class="cx">✗</span> Billing & payments</li>
           <li class="muted"><span class="cx">✗</span> AI medical scribe</li>
+          <li class="muted"><span class="cx">✗</span> AI differential diagnosis</li>
+          <li class="muted"><span class="cx">✗</span> Teleconsultation</li>
+          <li class="muted"><span class="cx">✗</span> PhysioReach</li>
+          <li class="muted"><span class="cx">✗</span> SMS reminders</li>
+        </ul>
+        <a href="https://app.physiocore.xyz/register" class="btn-blue btn-blue-out">Start Free →</a>
+      </div>
+
+      <!-- STARTER -->
+      <div class="price-card">
+        <div class="price-name">Starter</div>
+        <div class="price-amt">
+          <span class="price-sym">&#8358;</span>
+          <span class="price-val" data-ngn-monthly="30,000" data-ngn-annual="300,000" data-usd-monthly="35" data-usd-annual="350">30,000</span>
+          <span class="price-period">/month</span>
+        </div>
+        <div class="price-save-row"><span class="price-save" style="font-size:13px;color:var(--green);font-weight:600"></span></div>
+        <div class="price-users">100 patients · Up to 5 staff</div>
+        <ul class="price-feats">
+          <li><span class="ck">✓</span> Everything in Free</li>
+          <li><span class="ck">✓</span> Billing & payments</li>
+          <li><span class="ck">✓</span> Itemised receipts</li>
+          <li><span class="ck">✓</span> SMS appointment reminders</li>
+          <li><span class="ck">✓</span> Basic revenue reports</li>
+          <li><span class="ck">✓</span> Full audit trail</li>
+          <li class="muted"><span class="cx">✗</span> AI medical scribe</li>
+          <li class="muted"><span class="cx">✗</span> AI differential diagnosis</li>
           <li class="muted"><span class="cx">✗</span> Teleconsultation</li>
           <li class="muted"><span class="cx">✗</span> PhysioReach remote care</li>
-          <li class="muted"><span class="cx">✗</span> HMO billing & management</li>
-          <li class="muted"><span class="cx">✗</span> Advanced analytics</li>
+          <li class="muted"><span class="cx">✗</span> HMO billing</li>
         </ul>
         <a href="https://app.physiocore.xyz/register" class="btn-blue btn-blue-out">Start Free Trial</a>
       </div>
@@ -600,22 +624,21 @@ footer{background:var(--n900);color:rgba(255,255,255,.6);padding:60px 24px 32px}
         <div class="price-name">Professional</div>
         <div class="price-amt">
           <span class="price-sym">&#8358;</span>
-          <span class="price-val" data-ngn-monthly="100,000" data-ngn-annual="1,000,000" data-usd-monthly="149" data-usd-annual="1,490">100,000</span>
+          <span class="price-val" data-ngn-monthly="75,000" data-ngn-annual="750,000" data-usd-monthly="70" data-usd-annual="700">75,000</span>
           <span class="price-period">/month</span>
         </div>
         <div class="price-save-row"><span class="price-save" style="font-size:13px;color:var(--green);font-weight:600"></span></div>
-        <div class="price-users">Up to 15 staff · Growing & mid-size clinics</div>
+        <div class="price-users">Unlimited patients · Unlimited staff</div>
         <ul class="price-feats">
-          <li><span class="ck">✓</span> Everything in Growth</li>
-          <li><span class="ck">✓</span> AI differential diagnosis</li>
-          <li><span class="ck">✓</span> AI medical scribe</li>
+          <li><span class="ck">✓</span> Everything in Starter</li>
+          <li><span class="ck">✓</span> <strong>AI Medical Scribe</strong></li>
+          <li><span class="ck">✓</span> AI Differential Diagnosis</li>
           <li><span class="ck">✓</span> Teleconsultation (video calls)</li>
           <li><span class="ck">✓</span> PhysioReach remote care</li>
           <li><span class="ck">✓</span> HMO billing & management</li>
           <li><span class="ck">✓</span> Advanced revenue analytics</li>
           <li><span class="ck">✓</span> Co-sign workflow for students</li>
           <li><span class="ck">✓</span> Inventory management</li>
-          <li><span class="ck">✓</span> PDF onboarding guide</li>
           <li class="muted"><span class="cx">✗</span> Custom MRN prefix</li>
           <li class="muted"><span class="cx">✗</span> Dedicated onboarding call</li>
         </ul>
@@ -627,26 +650,24 @@ footer{background:var(--n900);color:rgba(255,255,255,.6);padding:60px 24px 32px}
         <div class="price-name">Enterprise</div>
         <div class="price-amt">
           <span class="price-sym">&#8358;</span>
-          <span class="price-val" data-ngn-monthly="250,000" data-ngn-annual="2,500,000" data-usd-monthly="250" data-usd-annual="2,500">250,000</span>
+          <span class="price-val" data-ngn-monthly="150,000" data-ngn-annual="1,500,000" data-usd-monthly="150" data-usd-annual="1,500">150,000</span>
           <span class="price-period">/month</span>
         </div>
         <div class="price-save-row"><span class="price-save" style="font-size:13px;color:var(--green);font-weight:600"></span></div>
         <div class="price-users">Unlimited staff · Hospitals & chains</div>
         <ul class="price-feats">
           <li><span class="ck">✓</span> Everything in Professional</li>
-          <li><span class="ck">✓</span> Unlimited staff accounts</li>
           <li><span class="ck">✓</span> Custom MRN prefix</li>
           <li><span class="ck">✓</span> Custom clinic branding on exports</li>
           <li><span class="ck">✓</span> Dedicated onboarding call</li>
           <li><span class="ck">✓</span> HIS integration support</li>
           <li><span class="ck">✓</span> Custom reporting</li>
           <li><span class="ck">✓</span> Priority support & SLA</li>
-          <li><span class="ck">✓</span> ₦5,000/user above 15</li>
         </ul>
-        <a href="https://app.physiocore.xyz/register" class="btn-blue btn-blue-out">Start Free Trial</a>
+        <a href="https://app.physiocore.xyz/register" class="btn-blue btn-blue-out">Contact Us</a>
       </div>
     </div>
-    <p class="price-note">All plans include a <strong>30-day free trial</strong>. No credit card required to start.</p>
+    <p class="price-note">New clinics get a <strong>14-day free trial</strong> with full Professional access. No credit card required.</p>
   </div>
 </section>
 
@@ -696,36 +717,45 @@ footer{background:var(--n900);color:rgba(255,255,255,.6);padding:60px 24px 32px}
 
     <div style="max-width:560px;margin:0 auto">
       <p style="text-align:center;font-size:14px;color:rgba(255,255,255,.6);margin-bottom:24px;letter-spacing:.3px;text-transform:uppercase;font-weight:600">Simple pricing. No clinic overhead.</p>
-      <div class="pcq-price-row">
+      <div class="pcq-price-row" style="flex-wrap:wrap;gap:16px">
         <div class="pcq-plan">
-          <div class="pcq-plan-name">Basic</div>
-          <div class="pcq-plan-price">₦8,000</div>
-          <div class="pcq-plan-period">per month · ₦80,000/yr</div>
+          <div class="pcq-plan-name">Free</div>
+          <div class="pcq-plan-price">₦0</div>
+          <div class="pcq-plan-period">forever · 15 patients</div>
           <ul class="pcq-plan-feats">
             <li><span>✓</span> Patient records & notes</li>
-            <li><span>✓</span> AI Differential Diagnosis</li>
-            <li><span>✓</span> SOAP & follow-up notes</li>
-            <li><span>✓</span> Reports & analytics</li>
-            <li><span class="cx">✕</span> AI Medical Scribe</li>
-            <li><span class="cx">✕</span> PhysioReach</li>
-            <li><span class="cx">✕</span> Receipts & Invoices</li>
+            <li><span>✓</span> Basic assessments</li>
+            <li><span>✓</span> SOAP templates (manual)</li>
+            <li><span class="cx">✕</span> AI features</li>
+            <li><span class="cx">✕</span> Unlimited patients</li>
           </ul>
         </div>
         <div class="pcq-plan hot">
           <div class="pcq-plan-name">Pro ⭐</div>
-          <div class="pcq-plan-price">₦15,000</div>
-          <div class="pcq-plan-period">per month · ₦150,000/yr</div>
+          <div class="pcq-plan-price">₦18,000</div>
+          <div class="pcq-plan-period">per month · ₦180,000/yr</div>
           <ul class="pcq-plan-feats">
-            <li><span>✓</span> Everything in Basic</li>
+            <li><span>✓</span> Unlimited patients</li>
             <li><span>✓</span> AI Medical Scribe</li>
+            <li><span>✓</span> AI Differential Diagnosis</li>
             <li><span>✓</span> PhysioReach remote care</li>
             <li><span>✓</span> Receipts & Invoices</li>
-            <li><span>✓</span> Specialist assessments</li>
+          </ul>
+        </div>
+        <div class="pcq-plan">
+          <div class="pcq-plan-name">Day Pass ⚡</div>
+          <div class="pcq-plan-price">₦1,000</div>
+          <div class="pcq-plan-period">per day · expires midnight</div>
+          <ul class="pcq-plan-feats">
+            <li><span>✓</span> AI Medical Scribe</li>
+            <li><span>✓</span> AI Differential Diagnosis</li>
+            <li><span>✓</span> No commitment</li>
+            <li><span>✓</span> Pay only when you need it</li>
           </ul>
         </div>
       </div>
       <p style="text-align:center;font-size:12px;color:rgba(255,255,255,.45);margin-bottom:32px">
-        International: Basic $15/mo · Pro $25/mo &nbsp;|&nbsp; 30-day free trial · No credit card required
+        International: Pro $30/mo · Day Pass $5 &nbsp;|&nbsp; 7-day free trial · No credit card required
       </p>
     </div>
 
@@ -789,7 +819,7 @@ footer{background:var(--n900);color:rgba(255,255,255,.6);padding:60px 24px 32px}
     <div class="demo-box">
       <div class="tag" style="text-align:center">Get Started</div>
       <h2>Ready to transform your clinic?</h2>
-      <p>Book a free 20-minute demo and we will walk you through the full platform. Or start your 30-day free trial today — no credit card required.</p>
+      <p>Book a free 20-minute demo and we will walk you through the full platform. Or start your 14-day free trial today — no credit card required.</p>
       <div id="demo-form-wrap">
         <div class="demo-form">
           <input class="demo-input" type="text" placeholder="Your name *" id="dname">
@@ -864,7 +894,7 @@ footer{background:var(--n900);color:rgba(255,255,255,.6);padding:60px 24px 32px}
       <p><strong>1. Agreement</strong><br>These Terms constitute a binding agreement between Oluwadamilola Oni ("PhysioCore") and any clinic or individual using the platform.</p><br>
       <p><strong>2. Service</strong><br>PhysioCore is a cloud-based electronic physiotherapy records system enabling clinics to manage patient records, document clinical assessments, schedule appointments, record payments, manage inventory, and generate reports.</p><br>
       <p><strong>3. Clinical Responsibility</strong><br>The AI-assisted differential diagnosis feature provides clinical decision support only. All clinical decisions remain the sole responsibility of the licensed physiotherapist.</p><br>
-      <p><strong>4. Subscription</strong><br>Plans: Growth (₦60,000/month or $79/month), Professional (₦100,000/month or $149/month), Enterprise (₦250,000/month or $250/month). New clinics receive a 30-day free trial. Fees are non-refundable except where required by law.</p><br>
+      <p><strong>4. Subscription</strong><br>Plans: Free (₦0, 20 patients, 2 staff — forever), Starter (₦30,000/month or $35/month), Professional (₦75,000/month or $70/month), Enterprise (₦150,000/month or $150/month). New clinics receive a 14-day free trial with full Professional access. Fees are non-refundable except where required by law.</p><br>
       <p><strong>5. Data</strong><br>You retain ownership of all patient and clinic data. PhysioCore acts as a data processor on your behalf.</p><br>
       <p><strong>6. Governing Law</strong><br>These Terms are governed by the laws of the Federal Republic of Nigeria, courts of Lagos State.</p><br>
       <p><strong>Contact:</strong> Oluwadamilola Oni · roiphysiotherapy@gmail.com · Lagos, Nigeria</p>
@@ -938,8 +968,8 @@ async function submitDemo() {
 
 // Pricing
 let isAnnual=false, activeCurrency='NGN'
-const NGN_SAVES=['₦120,000','₦200,000','₦500,000']
-const USD_SAVES=['$158','$298','$500']
+const NGN_SAVES=['₦60,000','₦150,000','₦300,000']
+const USD_SAVES=['$70','$140','$300']
 
 function updatePrices(){
   const c=activeCurrency, sym=c==='USD'?'$':'₦'
